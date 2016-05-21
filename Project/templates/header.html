@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+1.1//EN" "http://www.w3.org/TR/xhtml11/
+DTD/xhtml11.dtd">
+ <html xmlns="http://www.w3.org/1999/
+xhtml" xml:lang="en">
+ <head>
+ 	<title>Raise High the Roof Beam! An Abiam Velazquez Fan Club</title>
+ 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+ <link rel="stylesheet" href="css/1.css" type="text/css" media="screen,projection" />
+ </head>
+ <body>
+
+ <section id="wrapper">
+ 	<div id="header">
+ 		<p class="description">An Abiam Velazquez Fan Club</p>
+ 			<h1><a href="index.php">Raise High the Roof Beam!</a></h1>
+ 				<ul id="nav">
+ 					<!-- <li><a href="books.php">Books</a></li> -->
+          <?php if( isset($_SESSION['logged_in']) AND ($_SESSION['locked'] == false) ) { echo '<li><a href="books.php">Books</a></li>'; }
+ 					 ?>
+ 					<? if( isset($_SESSION['logged_in']) AND ($_SESSION['locked'] == false) ) { echo '<li><a href="quotes.php">Quotes</a></li>'; }
+ 					 ?>
+ 					<? if( !isset($_SESSION['logged_in']) AND ($_SESSION['locked'] == false) ) { echo '<li><a href="login.php">Login</a></li>'; }
+ 					 	else { echo '<li><a href="logout.php">Sign Out</a></li>'; }
+ 					 ?>
+ 					 <? if( !isset($_SESSION['logged_in']) AND ($_SESSION['locked'] == false) ) { echo '<li><a href="register.php">Register</a></li>'; }
+ 					 ?>
+ 					 <? if( isset($_SESSION['logged_in']) AND ($_SESSION['locked'] == false)) { echo '<li><a href="stories.php">Stories</a></li>'; }
+ 					 ?>
+ 					 <? if( isset($_SESSION['logged_in']) AND ($_SESSION['locked'] == false) ) { echo '<li><a href="upload.php">Upload</a></li>'; }
+ 					 ?>
+           <? if( isset($_SESSION['logged_in']) AND $_SESSION['admin'] == true AND ($_SESSION['locked'] == false) ) { echo '<li><a href="admin.php">Admin</a></li>'; }
+            ?>
+ 					<!-- <li><a href="register.php">Register</a></li> -->
+ 					<? if( isset($_SESSION['logged_in']) AND ($_SESSION['locked'] == false) ) { echo '<li><a href="email.php">Contact</a></li>'; }
+ 					 php?>
+ 				</ul>
+ 	</div><!-- header -->
+ </section>
+
+ <section id="sidebar">
+ 	<h2>Favorite Quotes</h2>
+ 		<p class="news">I don't exactly know what I mean by that, but I mean it.<br />- <em>The Catcher in the Rye</em></p>
+ 		<p class="news">I privately say to you, old friend... please accept from me this unpretentious bouquet of early-blooming
+			parentheses: (((()))).<br />- <em> Raise High the Roof Beam, Carpenters and Seymour: An Introduction</em></p>
+		<?
+			date_default_timezone_set("America/Chicago");
+			echo date("l jS \of F h:i a") . "<br>";
+
+		php?>
+ </section><!-- sidebar -->
+<!--
+  <div id="content"> -->
+ <!-- BEGIN CHANGEABLE CONTENT. -->

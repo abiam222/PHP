@@ -1,0 +1,73 @@
+
+.main {
+	text-align: center;
+	margin: 10px;
+}
+
+.description h1 {
+	display: inline;
+}
+
+#header {
+	text-align: center;
+}
+
+#header li {
+    float: left;
+   /* display: inline;*/
+}
+
+#nav {
+    list-style-type: none;
+    margin:10px;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+li a {
+    display: block;
+    padding: 0 15px;
+  /*  margin: 0 30px;*/
+    background-color: #dddddd;
+}
+
+#sidebar {
+	float:right;
+	margin: 0 0 0 50px;
+	width: 250px;
+}
+
+#footer {
+	text-align: center;
+}
+
+.center {
+	text-align: center;
+}
+
+
+.error {
+    color: red;
+}
+
+a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}
